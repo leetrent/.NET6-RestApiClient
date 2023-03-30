@@ -1,1 +1,5 @@
+Tutorial: Make HTTP requests in a .NET console app using C#
 https://learn.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient
+
+How to serialize and deserialize (marshal and unmarshal) JSON in .NET:
+https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/how-to?pivots=dotnet-6-0
