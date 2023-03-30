@@ -7,9 +7,14 @@ client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("app
 client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
 
 List<Repository> repositories = await ProcessRepositoriesAsync(client);
-foreach (Repository repo in repositories) 
+foreach (var repo in repositories)
 {
-    Console.Write($"|| {repo.Name}");
+    Console.WriteLine($"Name.......: {repo.Name}");
+    Console.WriteLine($"Homepage...: {repo.Homepage}");
+    Console.WriteLine($"GitHub.....: {repo.GitHubHomeUrl}");
+    Console.WriteLine($"Description: {repo.Description}");
+    Console.WriteLine($"Watchers...: {repo.Watchers:#,0}");
+    Console.WriteLine();
 }
 
  static async Task<List<Repository>>ProcessRepositoriesAsync(HttpClient client)
